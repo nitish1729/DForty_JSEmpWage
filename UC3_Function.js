@@ -3,26 +3,30 @@ const FullTime = 2;
 const PartTimeHrs = 4;
 const FullTimeHrs = 8;
 const EmpWagesPerHrs = 20;
+ let EmpHrs =0;
+let AttendanceCheck = Math.floor(Math.random() * 3);
 
-
-function getWorkingHrs(AttendanceCheck)
+function getWorkingHours(AttendanceCheck)
 {
- switch(AttendanceCheck)
- {
-    case PartTime:
-        return PartTimeHrs;
+  switch(AttendanceCheck)
+   {
+      case PartTime:
+
+       // EmpHrs = PartTimeHrs;
        // console.log("Emp daily wages for PartTime work is : " + PartTimeHrs*EmpWagesPerHrs);
-        
-    case FullTime:
-        return FullTimeHrs;
-       // console.log("Emp daily wages for FullTime work is : " + FullTimeHrs*EmpWagesPerHrs);   
-        
+      //  break;
+       return PartTimeHrs;
+      case FullTime:
+       // EmpHrs = FullTimeHrs;
+      //  console.log("Emp daily wages for FullTime work is : " + FullTimeHrs*EmpWagesPerHrs);   
+       // break;
+       return FullTimeHrs;
         default:
-        return 0;
-  }
+       // EmpHrs = 0;
+       return 0;
+   }
 }
-let EmpHrs = 0;
-let AttendanceCheck = Math.floor(Math.random() * 10) % 3;
-EmpHrs = getWorkinghrs(AttendanceCheck);
-let EmpWage = EmpHrs* EmpWagesPerHrs;
-console.log("EmpWage : " + EmpWage);
+
+empHrs = getWorkingHours(AttendanceCheck);
+let EmpWage = empHrs*EmpWagesPerHrs;
+console.log("Employee Working hours ="+ empHrs + ", Employee = "+ EmpWage);
