@@ -10,9 +10,9 @@ let totalWorkingDays = 0;
 while(totalEmpHrs <= MaxHrsInMonth && totalWorkingDays < NumOfWorkingDays)
 {
     totalWorkingDays++;
-    let AttendanceCheck = Math.floor(Math.random()*5);
-    totalEmpHrs += getWorkingHrs(AttendanceCheck);
+    let AttendanceCheck = Math.floor(Math.random()*10);
+    totalEmpHrs += AttendanceCheck;
 
 }
 let EmpWage = totalEmpHrs * EmpWagesPerHrs;
-console.log("Total Days : " + totalWorkingDays + "Total Hrs : " + totalEmpHrs + " Emp Wage " + EmpWage);
+console.log("Total Days = " + totalWorkingDays+" Days" + ",   Total Hrs = " + totalEmpHrs+" Hours" + ", Emp Wage = " +"Rs "+ EmpWage);
