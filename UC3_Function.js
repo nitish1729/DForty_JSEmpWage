@@ -29,4 +29,4 @@ function getWorkingHours(AttendanceCheck)
 
 empHrs = getWorkingHours(AttendanceCheck);
 let EmpWage = empHrs*EmpWagesPerHrs;
-console.log("Employee Working hours ="+ empHrs + ", Employee = "+ EmpWage);
+console.log("Employee Working hours ="+ empHrs + ", Employee Wages = "+ EmpWage);
